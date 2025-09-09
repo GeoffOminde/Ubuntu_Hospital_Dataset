@@ -43,9 +43,6 @@ df = pd.DataFrame(data)
 print("🏥 Welcome to Ubuntu General Hospital!")
 print(df.head(10))
 💬 Ubuntu Reflection: Each row is a person. Their age, condition, satisfaction — these aren’t just numbers. They represent lived experiences. Handle them with care.
-```
-## 🔍 Step 2: Explore the Data — Know Your Community
-
 
 ```python
 Copy code
@@ -65,19 +62,18 @@ plt.xlabel("Condition")
 plt.ylabel("Number of Patients")
 plt.show()
 💬 Ubuntu Reflection: Visualization gives voice to the community’s needs. Who needs more care?
-```
-### 🧹 Step 3: Clean the Data — Healing the Gaps Together
 
- ``` python
+🧹 Step 3: Clean the Data — Healing the Gaps Together
+python
 Copy code
 # Introduce missing satisfaction scores
 df.loc[np.random.choice(df.index, size=10), 'Satisfaction_Score'] = np.nan
 avg_satisfaction = df['Satisfaction_Score'].mean()
 df['Satisfaction_Score'].fillna(avg_satisfaction, inplace=True)
 💬 Ubuntu Reflection: Instead of deleting incomplete records, we uplift them using the wisdom of the whole.
-```
-## 📈 Step 4: Analyze & Visualize — Wisdom Through Sharing
-```python
+
+📈 Step 4: Analyze & Visualize — Wisdom Through Sharing
+python
 Copy code
 # Treatment Duration by Condition
 sns.boxplot(data=df, x='Condition', y='Treatment_Duration_Days', palette='Set2')
@@ -89,9 +85,9 @@ sns.scatterplot(data=df, x='Treatment_Duration_Days', y='Satisfaction_Score', hu
 plt.title("😊 Satisfaction vs Treatment Duration")
 plt.show()
 💬 Ubuntu Reflection: Data reveals patterns — but only when we ask compassionate questions.
-```
-## 🤖 Step 5: Simple Prediction — Serving the Future Together
-```python
+
+🤖 Step 5: Simple Prediction — Serving the Future Together
+python
 Copy code
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
@@ -113,9 +109,9 @@ sns.heatmap(cm, annot=True, fmt='d', cmap='Blues', xticklabels=['No Follow-Up', 
 plt.title("🔍 Confusion Matrix — Where Can We Improve Our Care?")
 plt.show()
 💬 Ubuntu Reflection: Even machines must learn with humility. Misclassifications teach us to listen better.
-```
-## 🌈 Step 6: Celebrate & Reflect — Ubuntu Closing Circle
-```python
+
+🌈 Step 6: Celebrate & Reflect — Ubuntu Closing Circle
+python
 Copy code
 print("🎉 CONGRATULATIONS! You’ve completed the Ubuntu Data Journey.")
 print("You honored stories, healed gaps, and predicted needs with compassion.")
